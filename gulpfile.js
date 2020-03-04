@@ -36,7 +36,7 @@ gulp.task('babel', () => {
 
 gulp.task('default', () => {
     gulp.watch('dev/**/*.pug', gulp.series('pug'))
-    gulp.watch('dev/scss/**/*.sass',gulp.series('sass'))
+    gulp.watch('dev/scss/**/*.sass',gulp.series('scss'))
     gulp.watch('dev/js/*.js', gulp.series('babel'))
     gulp.watch('dist/**/*.html').on('change',browsersync.reload)
     browsersync.init({
